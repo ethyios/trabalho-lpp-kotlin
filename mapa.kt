@@ -3,9 +3,11 @@ import kotlin.math.sqrt
 
 class Ponto2d(var x: Int=0, var y: Int=0) {
     fun distancia(enxerido: Ponto2d): Double {
-        var deltax = (enxerido.x-this.x)
-        var deltay = (enxerido.y-this.y)
-        var dist = sqrt(deltax.pow(2) + deltay.pow(2))
+        var dist = sqrt(
+            pow(enxerido.x-this.x).toDouble(),2.0f
+            +
+            pow(enxerido.y-this.y).toDouble(),2.0f
+        )
         return dist
     }
 }
