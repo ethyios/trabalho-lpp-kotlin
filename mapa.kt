@@ -1,12 +1,13 @@
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-class Ponto2d(var x: Int=0, var y: Int=0) {
-    fun distancia(enxerido: Ponto2d): Double {
+class Ponto2d(var x: Int=0, var y: Int=0) { //Declaração da classe com duas variáveis
+                                            //Que representam as coordenadas.
+    fun distancia(enxerido: Ponto2d): Double { //Método
         var dist = sqrt(
-            pow(enxerido.x-this.x).toDouble(),2.0f
+            ((enxerido.x-this.x).toDouble()).pow(2)
             +
-            pow(enxerido.y-this.y).toDouble(),2.0f
+            ((enxerido.y-this.y).toDouble()).pow(2)
         )
         return dist
     }
