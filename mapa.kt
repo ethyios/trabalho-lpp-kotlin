@@ -4,7 +4,7 @@ import kotlin.math.sqrt
 
 class Ponto2d(var x: Int=0, var y: Int=0) { //Declaração da classe com duas variáveis
                                             //Que representam as coordenadas.
-    fun distancia(enxerido: Ponto2d): Float { //Método
+    fun distancia(enxerido: Ponto2d): Float { //Método que calcula a distância
         var dist = sqrt(
             ((enxerido.x-this.x).toFloat()).pow(2)
             +
@@ -13,8 +13,8 @@ class Ponto2d(var x: Int=0, var y: Int=0) { //Declaração da classe com duas va
         return dist
     }
 
-    fun eigual(otenxerido: Ponto2d): Boolean {
-        if (this.distancia(otenxerido) == 0f) {
+    fun eigual(otenxerido: Ponto2d): Boolean { //Método que calcula se os pontos
+        if (this.distancia(otenxerido) == 0f) { //são iguais.
             return true
         }
         else {
